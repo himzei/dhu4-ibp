@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
 * {
     box-sizing: border-box;
+    list-style: none;
+    margin: 0; 
+    padding: 0; 
 }
 body {
-    margin: 0; 
     font-family: 'Noto Sans KR', sans-serif;
 }
 .main{
@@ -142,4 +144,136 @@ body {
 }
 .box-item p {
     text-align: center;
+}
+
+/* 로드맵 */
+.roadmap {
+    width: 100%; 
+    padding: 120px 0;
+    display: flex; 
+    justify-content: center;
+    background-image: url("./images/universe.jpg");
+}
+.roadmap-container {
+    width: 1200px; 
+}
+.roadmap-contents {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+.contents-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.contents-item:nth-child(odd){
+    text-align: right; 
+}
+.item-left{
+    width: 49%;
+    padding: 12px;
+}
+.item-center{
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.item-right{
+    width: 49%;
+    padding: 12px;
+}
+.item {
+    width: 100%; 
+    border-radius: 20px;
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.item p {
+    margin: 0px;
+    color: white; 
+}
+.item h2 {
+    margin: 4px; 
+    color: #00C6C8;
+}
+
+/* 팀&어드바이저 */
+.team{
+    width: 100%; 
+    padding: 120px 0;
+    display: flex; 
+    justify-content: center;
+    background-image: url("./images/universe.jpg");
+}
+.team-container{
+    width: 1200px; 
+    height: 460px; 
+}
+
+.tabmenu {
+    color: white;
+}
+.tabmenu ul {
+    display: flex;
+    position: relative;
+}
+.tabmenu ul li {
+    width: 50%; 
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05); 
+}
+.tabmenu ul li input {
+    display: none;
+}
+.tabmenu ul li label {
+    display: block;
+    line-height: 60px;
+    cursor: pointer;
+}
+.tabmenu .tabCon {
+    display: none;
+    position: absolute;
+    left: 0; 
+    top: 60px; 
+    width: 100%; 
+    height: 300px; 
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px 25px; 
+    text-align: left;
+}
+.tabmenu input:checked ~ label {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00C6C8;
+}
+.tabmenu input:checked ~ .tabCon{
+    display: block;
+}
+.tabCon-item {
+    display: flex; 
+    width: 100%; 
+    height: 100%; 
+    padding: 20px;
+    justify-content: center;
+}
+
+.tabCon-item > div {
+    width: 240px; 
+    height: 160px; 
+    padding: 20px 15px; 
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.tabCon-item > div:hover{
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+.tabCon-item h4 {
+    color: #00c6c8;
+}
+.tabCon-item p {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
 }
